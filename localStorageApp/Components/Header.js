@@ -1,9 +1,14 @@
+import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 
 
 export default function Header(){
+    const navigation = useNavigation();
+  const handleNavigation = (route) => {
+    navigation.navigate(route);
+  };
     return (
         <View style={styles.container}>
           <View style={styles.headerImages}>
@@ -15,7 +20,10 @@ export default function Header(){
             </View>
             <View style={styles.subHeaderImages}>
               <Image source={require('../assets/Search.png')} style={styles.subHeaderImages1}/>
+              <TouchableOpacity onPress={() => handleNavigation('CartScreen')}>
               <Image source={require('../assets/shoppingBag.png')}/>
+              </TouchableOpacity>
+              
             </View>
           </View>
     
