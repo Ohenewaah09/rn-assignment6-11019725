@@ -71,8 +71,8 @@ export default function CartScreen({ route }) {
       </ScrollView>
       <View style={styles.footerContent}>
         <View style={styles.totalContainer}>
-          <Text>EST. TOTAL</Text>
-          <Text>${calculateTotal()}</Text>
+          <Text style={styles.totalContainerText}>EST. TOTAL</Text>
+          <Text style={styles.totalContainerTotal}>${calculateTotal()}</Text>
         </View>
         <View style={styles.checkoutFooter}>
           <Image source={require('../assets/shoppingBag.png')} style={styles.shoppingBag} />
@@ -164,8 +164,8 @@ const styles = StyleSheet.create({
   footerContent: {
     backgroundColor: '#fff',
     padding: 20,
-    borderTopWidth: 1,
-    borderTopColor: '#ccc',
+    // borderTopWidth: 1,
+    // borderTopColor: '#ccc',
     position: 'absolute',
     bottom: 0,
     width: '100%',
@@ -192,5 +192,14 @@ const styles = StyleSheet.create({
   checkoutFooterText: {
     color: '#fff',
     fontSize: 22,
+  },
+  totalContainerText:{
+    fontSize: 22,
+    // color: '#A9A9A9',
+    fontWeight:'300',
+  },
+  totalContainerTotal:{
+    fontSize: 22,
+    color:'red'
   },
 });
