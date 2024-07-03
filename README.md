@@ -1,6 +1,6 @@
 # rn-assignment6-11019725
 
-## a brief README explaining my design choices and how you implemented data storage
+## A brief README explaining my design choices and how I implemented data storage
 
 ### Header
 
